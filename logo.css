@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+:root {
+    --fontSize: 100px;
+    --lineHeight: 100px;
+}
+
+body {
+    margin:0px;
+    font-family:'Roboto';
+}
+
+span {
+    color: #EA1C40;
+}
+  
+#container {
+color: black;
+text-transform: uppercase;
+font-size: var(--fontSize);
+font-weight:bold; 
+width:100%;
+display:block;
+line-height: var(--lineHeight);
+padding-top: 10PX;
+}
+
+#flip {
+height:var(--lineHeight);
+overflow:hidden;
+}
+
+#flip > div > div {
+height:var(--lineHeight);
+display:inline-block;
+}
+
+#flip div:first-child {
+animation: show 5200ms linear infinite;
+}
+
+
+@keyframes show {
+0%{margin-top:calc(-1 * var(--lineHeight) * 0);}
+19.23% {margin-top:calc(-1 * var(--lineHeight) * 0);}
+
+25% {margin-top:calc(-1 * var(--lineHeight) * 1);}
+44.23% {margin-top:calc(-1 * var(--lineHeight) * 1);}
+
+50% {margin-top:calc(-1 * var(--lineHeight) * 2);}
+69.23% {margin-top:calc(-1 * var(--lineHeight) * 2);}
+
+75% {margin-top:calc(-1 * var(--lineHeight) * 3);}
+94.23% {margin-top:calc(-1 * var(--lineHeight) * 3);}
+99.99%{
+    margin-top:calc(-1 * var(--lineHeight) * 4);
+}
+100%{
+    margin-top:calc(-1 * var(--lineHeight) * 4);
+}
+}
